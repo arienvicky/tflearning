@@ -74,7 +74,6 @@ resource "null_resource" "prov_null" {
 */
 
 resource "aws_instance" "testVM1" {
-  provider      = aws.california
   ami           = "ami-082b5a644766e0e6f"
   instance_type = "t2.micro"
 }
