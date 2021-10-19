@@ -1,3 +1,4 @@
+/*
 resource "aws_instance" "testVM" {
   provider      = aws
   ami           = "ami-082b5a644766e0e6f"
@@ -8,7 +9,6 @@ resource "aws_instance" "testVM" {
   }
 }
 
-/*
 
 resource "aws_instance" "ec2-prod" {
   ami = data.aws_ami.ami.id
@@ -71,9 +71,9 @@ resource "null_resource" "prov_null" {
   }
 
 }
-*/
+
 
 resource "aws_instance" "testVM1" {
   ami           = "ami-082b5a644766e0e6f"
   instance_type = "t2.micro"
-}
+}*/
