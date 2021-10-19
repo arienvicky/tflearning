@@ -4,9 +4,11 @@ pipeline{
         PATH = "${PATH}:${getTerraformPath()}"
     }
     stages{
-        stage ('terraform init'){
+        stage ('terraform init and apply - dev'){
             steps{
+                bat "bat returnStatus: true, script: 'terraform workspace new dev'"
                 bat "terraform init"
+                bat "terraform apply -var-file=dev.tfvars"
             }
         }
 
